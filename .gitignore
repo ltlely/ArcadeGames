@@ -1,0 +1,13 @@
+# Godot-specific folders
+.import/
+.mono/
+
+# Godot-specific project metadata
+.godot/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Debugging and logs
+.log
