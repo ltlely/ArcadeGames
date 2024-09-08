@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bbuu6lmqcawg4"]
 
-[ext_resource type="Script" path="res://ArcadeGames/Scripts/playButton.gd" id="1_cnodk"]
-[ext_resource type="Script" path="res://ArcadeGames/Scripts/quitButton.gd" id="2_xq2nc"]
+[ext_resource type="Script" path="res://Scripts/playButton.gd" id="1_cnodk"]
+[ext_resource type="Script" path="res://Scripts/quitButton.gd" id="2_xq2nc"]
 
 [sub_resource type="GDScript" id="GDScript_o0j71"]
 script/source = "extends Control
