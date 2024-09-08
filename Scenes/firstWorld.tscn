@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdlsfh84wbxcy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hke1p"]
+
+[node name="FirstWorld" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 524.0
+offset_bottom = 328.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hke1p")
