@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbuu6lmqcawg4"]
+[gd_scene load_steps=6 format=3 uid="uid://bbuu6lmqcawg4"]
 
-[ext_resource type="Script" path="res://ArcadeGames/Scripts/playButton.gd" id="1_cnodk"]
-[ext_resource type="Script" path="res://ArcadeGames/Scripts/quitButton.gd" id="2_xq2nc"]
+[ext_resource type="Script" path="res://Scripts/playButton.gd" id="1_cnodk"]
+[ext_resource type="Script" path="res://Scripts/quitButton.gd" id="2_xq2nc"]
 
 [sub_resource type="GDScript" id="GDScript_o0j71"]
 script/source = "extends Control
@@ -15,7 +15,9 @@ func _on_pressedQuit() -> void:
 "
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0e0b"]
-bg_color = Color(0.320728, 0.647025, 0.775997, 1)
+bg_color = Color(0.700035, 0.515335, 0.794112, 1)
+
+[sub_resource type="Theme" id="Theme_k1ffw"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -34,10 +36,14 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_b0e0b")
 
 [node name="Label" type="Label" parent="Control/Panel"]
 layout_mode = 0
-offset_left = 213.0
-offset_top = 92.0
-offset_right = 253.0
-offset_bottom = 115.0
+offset_left = 187.0
+offset_top = 78.0
+offset_right = 380.0
+offset_bottom = 113.0
+theme = SubResource("Theme_k1ffw")
+theme_override_colors/font_color = Color(0.583447, 0.0422298, 0.627096, 1)
+theme_override_colors/font_shadow_color = Color(0.744905, 0.287202, 0.670824, 1)
+theme_override_font_sizes/font_size = 25
 text = "Welcome Player"
 
 [node name="Button" type="Button" parent="Control/Panel"]

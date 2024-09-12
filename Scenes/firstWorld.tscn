@@ -1,10 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdlsfh84wbxcy"]
+[gd_scene load_steps=5 format=3 uid="uid://bdlsfh84wbxcy"]
+
+[ext_resource type="Script" path="res://Scripts/backButton.gd" id="1_72dte"]
+[ext_resource type="Texture2D" uid="uid://cnpp058mvjsfe" path="res://Assets/CuteBackButton.png" id="1_mh7yx"]
+
+[sub_resource type="Theme" id="Theme_wxeef"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hke1p"]
+bg_color = Color(0.733377, 0.497173, 0.78646, 1)
 
 [node name="FirstWorld" type="Node2D"]
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 524.0
 offset_bottom = 328.0
+theme = SubResource("Theme_wxeef")
 theme_override_styles/panel = SubResource("StyleBoxFlat_hke1p")
+
+[node name="TextureButton" type="TextureButton" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 457.0
+offset_top = 2.0
+offset_right = 521.0
+offset_bottom = 53.0
+texture_normal = ExtResource("1_mh7yx")
+stretch_mode = 0
+script = ExtResource("1_72dte")
+
+[connection signal="pressed" from="Panel/TextureButton" to="Panel/TextureButton" method="_on_pressed"]
