@@ -1,30 +1,115 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdlsfh84wbxcy"]
+[gd_scene load_steps=21 format=3 uid="uid://bdlsfh84wbxcy"]
 
 [ext_resource type="Script" path="res://Scripts/backButton.gd" id="1_72dte"]
-[ext_resource type="Texture2D" uid="uid://cnpp058mvjsfe" path="res://Assets/CuteBackButton.png" id="1_mh7yx"]
-
-[sub_resource type="Theme" id="Theme_wxeef"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hke1p"]
-bg_color = Color(0.733377, 0.497173, 0.78646, 1)
+[ext_resource type="Texture2D" uid="uid://c2ygypvpf8c22" path="res://Assets/pink_background.png" id="1_js0sa"]
+[ext_resource type="Texture2D" uid="uid://cfout8limyrce" path="res://Assets/CuteBackButton.png" id="1_mh7yx"]
+[ext_resource type="Texture2D" uid="uid://db8svw1plhdy" path="res://Assets/help_icon.png" id="2_aax2d"]
+[ext_resource type="Texture2D" uid="uid://c2417sq2b0pf4" path="res://Assets/player1_box.png" id="5_0ph5j"]
+[ext_resource type="Texture2D" uid="uid://cgkfnwsqljpym" path="res://Assets/player2_box.png" id="6_lgo1j"]
+[ext_resource type="Texture2D" uid="uid://f25w74gykiob" path="res://Assets/player3_box.png" id="7_40b7q"]
+[ext_resource type="Texture2D" uid="uid://cb6rc5ifqxhxu" path="res://Assets/player4_box.png" id="8_lgbmi"]
+[ext_resource type="Texture2D" uid="uid://jg1bosmwjyq8" path="res://Assets/main_box.png" id="9_tkwg6"]
+[ext_resource type="Texture2D" uid="uid://muodcselksnm" path="res://Assets/Button Danger.png" id="10_p2bya"]
+[ext_resource type="Texture2D" uid="uid://4haquyl0i4ch" path="res://Assets/9_button.png" id="11_ui1ka"]
+[ext_resource type="Texture2D" uid="uid://b7w6pyg1fqnib" path="res://Assets/8_button.png" id="12_2nf7k"]
+[ext_resource type="Texture2D" uid="uid://50fbfw0hc44t" path="res://Assets/7_button.png" id="13_2rseb"]
+[ext_resource type="Texture2D" uid="uid://dmh0fg1cbqlqy" path="res://Assets/6_button.png" id="14_o6kfw"]
+[ext_resource type="Texture2D" uid="uid://cpomj5w7wn2pd" path="res://Assets/5_button.png" id="15_qnms8"]
+[ext_resource type="Texture2D" uid="uid://e1dm1nf8kvuk" path="res://Assets/4_button.png" id="16_tl717"]
+[ext_resource type="Texture2D" uid="uid://dqojx2gdoras2" path="res://Assets/3_button.png" id="17_xvasw"]
+[ext_resource type="Texture2D" uid="uid://yigki7ewvv0q" path="res://Assets/2_button.png" id="18_dkqns"]
+[ext_resource type="Texture2D" uid="uid://0505v0mde10t" path="res://Assets/1_button.png" id="19_e0hs5"]
+[ext_resource type="Texture2D" uid="uid://cau4w0busr3or" path="res://Assets/0_button.png" id="20_bucrp"]
 
 [node name="FirstWorld" type="Node2D"]
 
-[node name="Panel" type="Panel" parent="."]
-offset_right = 524.0
-offset_bottom = 328.0
-theme = SubResource("Theme_wxeef")
-theme_override_styles/panel = SubResource("StyleBoxFlat_hke1p")
+[node name="PinkBackground" type="Sprite2D" parent="."]
+position = Vector2(577.25, 319.875)
+scale = Vector2(1.84535, 1.68931)
+texture = ExtResource("1_js0sa")
 
-[node name="TextureButton" type="TextureButton" parent="Panel"]
+[node name="HelpIcon" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(288.156, -165.082)
+scale = Vector2(0.541902, 0.591956)
+texture = ExtResource("2_aax2d")
+
+[node name="TextureButton" type="TextureButton" parent="PinkBackground"]
 texture_filter = 1
-layout_mode = 0
-offset_left = 457.0
-offset_top = 2.0
-offset_right = 521.0
-offset_bottom = 53.0
+offset_left = 127.753
+offset_top = -192.312
+offset_right = 191.753
+offset_bottom = -141.312
 texture_normal = ExtResource("1_mh7yx")
 stretch_mode = 0
 script = ExtResource("1_72dte")
 
-[connection signal="pressed" from="Panel/TextureButton" to="Panel/TextureButton" method="_on_pressed"]
+[node name="Player1Box" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(-248.868, -84.5757)
+scale = Vector2(0.612008, 0.695047)
+texture = ExtResource("5_0ph5j")
+
+[node name="Player2Box" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(-248.868, 49.7983)
+scale = Vector2(0.61645, 0.655676)
+texture = ExtResource("6_lgo1j")
+
+[node name="Player3Box" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(214.274, -89.204)
+scale = Vector2(0.609954, 0.678596)
+texture = ExtResource("7_40b7q")
+
+[node name="Player4Box" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(216.625, 48.6144)
+scale = Vector2(0.663089, 0.718107)
+texture = ExtResource("8_lgbmi")
+
+[node name="MainBox" type="Sprite2D" parent="."]
+position = Vector2(544, 308)
+scale = Vector2(0.81738, 0.847349)
+texture = ExtResource("9_tkwg6")
+
+[node name="ButtonDanger" type="Sprite2D" parent="."]
+position = Vector2(1016, 43)
+texture = ExtResource("10_p2bya")
+
+[node name="9Button" type="Sprite2D" parent="."]
+position = Vector2(803, 450)
+texture = ExtResource("11_ui1ka")
+
+[node name="8Button" type="Sprite2D" parent="."]
+position = Vector2(748, 449)
+texture = ExtResource("12_2nf7k")
+
+[node name="7Button" type="Sprite2D" parent="."]
+position = Vector2(694, 449)
+texture = ExtResource("13_2rseb")
+
+[node name="6Button" type="Sprite2D" parent="."]
+position = Vector2(638, 448)
+texture = ExtResource("14_o6kfw")
+
+[node name="5Button" type="Sprite2D" parent="."]
+position = Vector2(583, 449)
+texture = ExtResource("15_qnms8")
+
+[node name="4Button" type="Sprite2D" parent="."]
+position = Vector2(525, 450)
+texture = ExtResource("16_tl717")
+
+[node name="3Button" type="Sprite2D" parent="."]
+position = Vector2(468, 449)
+texture = ExtResource("17_xvasw")
+
+[node name="2Button" type="Sprite2D" parent="."]
+position = Vector2(412, 449)
+texture = ExtResource("18_dkqns")
+
+[node name="1Button" type="Sprite2D" parent="."]
+position = Vector2(357, 449)
+texture = ExtResource("19_e0hs5")
+
+[node name="0Button" type="Sprite2D" parent="."]
+position = Vector2(301, 449)
+texture = ExtResource("20_bucrp")
+
+[connection signal="pressed" from="PinkBackground/TextureButton" to="PinkBackground/TextureButton" method="_on_pressed"]
