@@ -1,9 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://bdlsfh84wbxcy"]
+[gd_scene load_steps=20 format=3 uid="uid://bdlsfh84wbxcy"]
 
 [ext_resource type="Texture2D" uid="uid://c2ygypvpf8c22" path="res://Assets/pink_background.png" id="1_js0sa"]
 [ext_resource type="Script" path="res://Scenes/texture_button_2.gd" id="2_6y2yj"]
 [ext_resource type="Texture2D" uid="uid://db8svw1plhdy" path="res://Assets/Buttons/help_icon.png" id="2_aax2d"]
-[ext_resource type="Script" path="res://Scenes/help_button.gd" id="4_yaqkr"]
 [ext_resource type="Texture2D" uid="uid://c2417sq2b0pf4" path="res://Assets/player1_box.png" id="5_0ph5j"]
 [ext_resource type="Texture2D" uid="uid://cgkfnwsqljpym" path="res://Assets/player2_box.png" id="6_lgo1j"]
 [ext_resource type="Texture2D" uid="uid://f25w74gykiob" path="res://Assets/player3_box.png" id="7_40b7q"]
@@ -45,26 +44,6 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(233.425, -165.674)
 scale = Vector2(0.541903, 0.591958)
 texture = ExtResource("10_p2bya")
-
-[node name="Control" type="Control" parent="PinkBackground"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 288.156
-offset_top = -165.082
-offset_right = 328.156
-offset_bottom = -125.082
-
-[node name="HelpButton" type="TextureButton" parent="PinkBackground/Control"]
-visible = false
-layout_mode = 0
-offset_left = -22.4321
-offset_top = -21.8226
-offset_right = 2.56787
-offset_bottom = 6.17743
-script = ExtResource("4_yaqkr")
-
-[node name="Popup" type="Popup" parent="PinkBackground/Control/HelpButton"]
-visible = true
 
 [node name="HelpIcon" type="Sprite2D" parent="PinkBackground"]
 position = Vector2(288.156, -165.082)
@@ -136,5 +115,10 @@ texture = ExtResource("19_e0hs5")
 position = Vector2(301, 449)
 texture = ExtResource("20_bucrp")
 
+[node name="Popup" type="Button" parent="."]
+offset_left = 1119.0
+offset_top = 30.0
+offset_right = 1127.0
+offset_bottom = 38.0
+
 [connection signal="pressed" from="PinkBackground/SurrenderButton" to="PinkBackground/SurrenderButton" method="_on_pressed"]
-[connection signal="pressed" from="PinkBackground/Control/HelpButton" to="PinkBackground/SurrenderButton" method="_on_help_button_pressed"]
