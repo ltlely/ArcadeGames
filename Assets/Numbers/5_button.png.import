@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://muodcselksnm"
-path="res://.godot/imported/Button Danger.png-67c8ef35ca79139bf14a5e54f1366085.ctex"
+uid="uid://cpomj5w7wn2pd"
+path="res://.godot/imported/5_button.png-c596e45673b5babea7d272bd66959757.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Button Danger.png"
-dest_files=["res://.godot/imported/Button Danger.png-67c8ef35ca79139bf14a5e54f1366085.ctex"]
+source_file="res://Assets/Numbers/5_button.png"
+dest_files=["res://.godot/imported/5_button.png-c596e45673b5babea7d272bd66959757.ctex"]
 
 [params]
 

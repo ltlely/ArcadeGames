@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7w6pyg1fqnib"
-path="res://.godot/imported/8_button.png-02d9b62424243896d66d46010d6f600f.ctex"
+uid="uid://btjy8hjc6fsuk"
+path="res://.godot/imported/checkmark.png-1ba5d196b3d9da5e543b18fcf7d70da4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/8_button.png"
-dest_files=["res://.godot/imported/8_button.png-02d9b62424243896d66d46010d6f600f.ctex"]
+source_file="res://Assets/Buttons/checkmark.png"
+dest_files=["res://.godot/imported/checkmark.png-1ba5d196b3d9da5e543b18fcf7d70da4.ctex"]
 
 [params]
 
