@@ -1,9 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://bdlsfh84wbxcy"]
+[gd_scene load_steps=22 format=3 uid="uid://bdlsfh84wbxcy"]
 
 [ext_resource type="Texture2D" uid="uid://c2ygypvpf8c22" path="res://Assets/pink_background.png" id="1_js0sa"]
 [ext_resource type="Script" path="res://Scenes/texture_button_2.gd" id="2_6y2yj"]
 [ext_resource type="Texture2D" uid="uid://db8svw1plhdy" path="res://Assets/Buttons/help_icon.png" id="2_aax2d"]
+[ext_resource type="Script" path="res://Scenes/helpControl.gd" id="4_1ek38"]
 [ext_resource type="Texture2D" uid="uid://c2417sq2b0pf4" path="res://Assets/player1_box.png" id="5_0ph5j"]
+[ext_resource type="Script" path="res://Scenes/helpButton.gd" id="6_2dger"]
 [ext_resource type="Texture2D" uid="uid://cgkfnwsqljpym" path="res://Assets/player2_box.png" id="6_lgo1j"]
 [ext_resource type="Texture2D" uid="uid://f25w74gykiob" path="res://Assets/player3_box.png" id="7_40b7q"]
 [ext_resource type="Texture2D" uid="uid://cb6rc5ifqxhxu" path="res://Assets/player4_box.png" id="8_lgbmi"]
@@ -45,11 +47,6 @@ position = Vector2(233.425, -165.674)
 scale = Vector2(0.541903, 0.591958)
 texture = ExtResource("10_p2bya")
 
-[node name="HelpIcon" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(288.156, -165.082)
-scale = Vector2(0.541902, 0.591956)
-texture = ExtResource("2_aax2d")
-
 [node name="Player1Box" type="Sprite2D" parent="PinkBackground"]
 position = Vector2(-247.65, -58.0119)
 scale = Vector2(0.612008, 0.695047)
@@ -70,55 +67,79 @@ position = Vector2(216.625, 48.6144)
 scale = Vector2(0.663089, 0.718107)
 texture = ExtResource("8_lgbmi")
 
-[node name="MainBox" type="Sprite2D" parent="."]
-position = Vector2(544, 308)
-scale = Vector2(0.81738, 0.847349)
+[node name="MainBox" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(-19.5085, -6.51154)
+scale = Vector2(0.44294, 0.501595)
 texture = ExtResource("9_tkwg6")
 
-[node name="9Button" type="Sprite2D" parent="."]
-position = Vector2(803, 450)
+[node name="9Button" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(120.844, 77.5464)
+scale = Vector2(0.541903, 0.591958)
 texture = ExtResource("11_ui1ka")
 
-[node name="8Button" type="Sprite2D" parent="."]
-position = Vector2(748, 449)
+[node name="8Button" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(91.0396, 76.9545)
+scale = Vector2(0.541903, 0.591958)
 texture = ExtResource("12_2nf7k")
 
-[node name="7Button" type="Sprite2D" parent="."]
-position = Vector2(694, 449)
+[node name="7Button" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(61.7769, 76.9545)
+scale = Vector2(0.541903, 0.591958)
 texture = ExtResource("13_2rseb")
 
-[node name="6Button" type="Sprite2D" parent="."]
-position = Vector2(638, 448)
+[node name="6Button" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(31.4304, 76.3625)
+scale = Vector2(0.541903, 0.591958)
 texture = ExtResource("14_o6kfw")
 
-[node name="5Button" type="Sprite2D" parent="."]
-position = Vector2(583, 449)
+[node name="5Button" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(1.62573, 76.9545)
+scale = Vector2(0.541903, 0.591958)
 texture = ExtResource("15_qnms8")
 
-[node name="4Button" type="Sprite2D" parent="."]
-position = Vector2(525, 450)
+[node name="4Button" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(-29.8046, 77.5464)
+scale = Vector2(0.541903, 0.591958)
 texture = ExtResource("16_tl717")
 
-[node name="3Button" type="Sprite2D" parent="."]
-position = Vector2(468, 449)
+[node name="3Button" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(-60.6931, 76.9545)
+scale = Vector2(0.541903, 0.591958)
 texture = ExtResource("17_xvasw")
 
-[node name="2Button" type="Sprite2D" parent="."]
-position = Vector2(412, 449)
+[node name="2Button" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(-91.0396, 76.9545)
+scale = Vector2(0.541903, 0.591958)
 texture = ExtResource("18_dkqns")
 
-[node name="1Button" type="Sprite2D" parent="."]
-position = Vector2(357, 449)
+[node name="1Button" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(-120.844, 76.9545)
+scale = Vector2(0.541903, 0.591958)
 texture = ExtResource("19_e0hs5")
 
-[node name="0Button" type="Sprite2D" parent="."]
-position = Vector2(301, 449)
+[node name="0Button" type="Sprite2D" parent="PinkBackground"]
+position = Vector2(-151.191, 76.9545)
+scale = Vector2(0.541903, 0.591958)
 texture = ExtResource("20_bucrp")
 
-[node name="Popup" type="Button" parent="."]
-offset_left = 1119.0
-offset_top = 30.0
-offset_right = 1127.0
-offset_bottom = 38.0
+[node name="Control" type="Control" parent="PinkBackground/0Button"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 794.0
+offset_top = -397.0
+offset_right = 832.0
+offset_bottom = -356.0
+script = ExtResource("4_1ek38")
+
+[node name="Button" type="Button" parent="PinkBackground/0Button/Control"]
+layout_mode = 0
+offset_left = -17.3409
+offset_top = -29.0059
+offset_right = 28.6591
+offset_bottom = 15.9941
+icon = ExtResource("2_aax2d")
+flat = true
+script = ExtResource("6_2dger")
 
 [connection signal="pressed" from="PinkBackground/SurrenderButton" to="PinkBackground/SurrenderButton" method="_on_pressed"]
+[connection signal="pressed" from="PinkBackground/0Button/Control/Button" to="PinkBackground/0Button/Control" method="_on_button_pressed"]

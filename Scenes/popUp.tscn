@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1xnwb1g3mdkv"]
+
+[ext_resource type="Script" path="res://Scenes/popupHelp.gd" id="1_qwsgi"]
+
+[node name="PopUp" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qwsgi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -813.0
+offset_top = 35.0
+offset_right = -122.0
+offset_bottom = 456.0
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 75.0
+offset_right = 628.0
+offset_bottom = 357.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "- After 5 rounds, players switch roles.
+- There are a total of 10 rounds.
+- An \"X\" is marked if a player in the team clicks the wrong number in one of their team’s boxes, and they must move on to the next question.
+- A checkmark is given if the player selects the correct number for both boxes.
+- Players cannot change their answers once submitted."
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
