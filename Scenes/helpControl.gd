@@ -28,6 +28,6 @@ func _on_button_pressed() -> void:
 
 		# Add the popup as a child to the current scene and display it
 		add_child(new_pop_up)
-
+		
 		# Keep track of the active popup
 		active_pop_up = new_pop_up
