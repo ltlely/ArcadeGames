@@ -1,11 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://bdlsfh84wbxcy"]
+[gd_scene load_steps=21 format=3 uid="uid://bdlsfh84wbxcy"]
 
 [ext_resource type="Texture2D" uid="uid://c2ygypvpf8c22" path="res://Assets/pink_background.png" id="1_js0sa"]
 [ext_resource type="Script" path="res://Scenes/texture_button_2.gd" id="2_6y2yj"]
 [ext_resource type="Texture2D" uid="uid://db8svw1plhdy" path="res://Assets/Buttons/help_icon.png" id="2_aax2d"]
 [ext_resource type="Script" path="res://Scenes/helpControl.gd" id="4_1ek38"]
 [ext_resource type="Texture2D" uid="uid://c2417sq2b0pf4" path="res://Assets/player1_box.png" id="5_0ph5j"]
-[ext_resource type="Script" path="res://Scenes/helpButton.gd" id="6_2dger"]
 [ext_resource type="Texture2D" uid="uid://cgkfnwsqljpym" path="res://Assets/player2_box.png" id="6_lgo1j"]
 [ext_resource type="Texture2D" uid="uid://f25w74gykiob" path="res://Assets/player3_box.png" id="7_40b7q"]
 [ext_resource type="Texture2D" uid="uid://cb6rc5ifqxhxu" path="res://Assets/player4_box.png" id="8_lgbmi"]
@@ -139,7 +138,6 @@ offset_right = 28.6591
 offset_bottom = 15.9941
 icon = ExtResource("2_aax2d")
 flat = true
-script = ExtResource("6_2dger")
 
 [connection signal="pressed" from="PinkBackground/SurrenderButton" to="PinkBackground/SurrenderButton" method="_on_pressed"]
 [connection signal="pressed" from="PinkBackground/0Button/Control/Button" to="PinkBackground/0Button/Control" method="_on_button_pressed"]
