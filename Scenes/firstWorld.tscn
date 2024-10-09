@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bdlsfh84wbxcy"]
+[gd_scene load_steps=22 format=3 uid="uid://bdlsfh84wbxcy"]
 
 [ext_resource type="Texture2D" uid="uid://c2ygypvpf8c22" path="res://Assets/pink_background.png" id="1_js0sa"]
 [ext_resource type="Script" path="res://Scenes/texture_button_2.gd" id="2_6y2yj"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://f25w74gykiob" path="res://Assets/player3_box.png" id="7_40b7q"]
 [ext_resource type="Texture2D" uid="uid://cb6rc5ifqxhxu" path="res://Assets/player4_box.png" id="8_lgbmi"]
 [ext_resource type="Texture2D" uid="uid://jg1bosmwjyq8" path="res://Assets/main_box.png" id="9_tkwg6"]
+[ext_resource type="Script" path="res://Scenes/label.gd" id="9_y78ns"]
 [ext_resource type="Texture2D" uid="uid://muodcselksnm" path="res://Assets/Buttons/Button Danger.png" id="10_p2bya"]
 [ext_resource type="Texture2D" uid="uid://4haquyl0i4ch" path="res://Assets/Numbers/9_button.png" id="11_ui1ka"]
 [ext_resource type="Texture2D" uid="uid://b7w6pyg1fqnib" path="res://Assets/Numbers/8_button.png" id="12_2nf7k"]
@@ -70,6 +71,32 @@ texture = ExtResource("8_lgbmi")
 position = Vector2(-19.5085, -6.51154)
 scale = Vector2(0.44294, 0.501595)
 texture = ExtResource("9_tkwg6")
+
+[node name="Label" type="RichTextLabel" parent="PinkBackground/MainBox"]
+offset_left = -265.483
+offset_top = -143.978
+offset_right = -132.483
+offset_bottom = -77.9784
+scale = Vector2(1.5, 1.5)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = " 1     2
+"
+autowrap_mode = 0
+script = ExtResource("9_y78ns")
+
+[node name="Label2" type="RichTextLabel" parent="PinkBackground/MainBox"]
+offset_left = 97.8737
+offset_top = -140.438
+offset_right = 230.874
+offset_bottom = -74.4379
+scale = Vector2(1.5, 1.5)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = " 1     2
+"
+autowrap_mode = 0
+script = ExtResource("9_y78ns")
 
 [node name="9Button" type="Sprite2D" parent="PinkBackground"]
 position = Vector2(120.844, 77.5464)
