@@ -14,6 +14,11 @@ config/name="arcadegames"
 run/main_scene="res://Scenes/startingScreen.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
+
 [file_customization]
 
 folder_colors={

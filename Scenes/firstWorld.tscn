@@ -25,8 +25,8 @@
 [node name="FirstWorld" type="Node2D"]
 
 [node name="PinkBackground" type="Sprite2D" parent="."]
-position = Vector2(580, 319)
-scale = Vector2(1.84535, 1.68931)
+position = Vector2(582.125, 328.438)
+scale = Vector2(1.85216, 1.73911)
 texture = ExtResource("1_js0sa")
 
 [node name="SurrenderButton" type="TextureButton" parent="PinkBackground"]

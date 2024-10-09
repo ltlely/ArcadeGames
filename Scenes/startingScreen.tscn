@@ -30,16 +30,16 @@ script = SubResource("GDScript_o0j71")
 
 [node name="Panel" type="Panel" parent="Control"]
 layout_mode = 0
-offset_right = 570.0
-offset_bottom = 390.0
+offset_right = 1167.0
+offset_bottom = 647.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_b0e0b")
 
 [node name="Label" type="Label" parent="Control/Panel"]
 layout_mode = 0
-offset_left = 187.0
-offset_top = 78.0
-offset_right = 380.0
-offset_bottom = 113.0
+offset_left = 497.0
+offset_top = 234.0
+offset_right = 690.0
+offset_bottom = 269.0
 theme = SubResource("Theme_k1ffw")
 theme_override_colors/font_color = Color(0.583447, 0.0422298, 0.627096, 1)
 theme_override_colors/font_shadow_color = Color(0.744905, 0.287202, 0.670824, 1)
@@ -48,19 +48,19 @@ text = "Welcome Player"
 
 [node name="Button" type="Button" parent="Control/Panel"]
 layout_mode = 0
-offset_left = 228.0
-offset_top = 119.0
-offset_right = 325.0
-offset_bottom = 153.0
+offset_left = 538.0
+offset_top = 275.0
+offset_right = 635.0
+offset_bottom = 309.0
 text = "Start Game"
 script = ExtResource("1_cnodk")
 
 [node name="Button2" type="Button" parent="Control/Panel"]
 layout_mode = 0
-offset_left = 231.0
-offset_top = 162.0
-offset_right = 325.0
-offset_bottom = 198.0
+offset_left = 541.0
+offset_top = 318.0
+offset_right = 635.0
+offset_bottom = 354.0
 text = "Quit"
 script = ExtResource("2_xq2nc")
 
