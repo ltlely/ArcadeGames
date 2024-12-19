@@ -1,170 +1,165 @@
-[gd_scene load_steps=22 format=3 uid="uid://bdlsfh84wbxcy"]
+[gd_scene load_steps=13 format=3 uid="uid://bdlsfh84wbxcy"]
 
-[ext_resource type="Texture2D" uid="uid://c2ygypvpf8c22" path="res://Assets/pink_background.png" id="1_js0sa"]
+[ext_resource type="Texture2D" uid="uid://d2kn73avwm5gu" path="res://Assets/background.png" id="1_11h8f"]
 [ext_resource type="Script" path="res://Scenes/texture_button_2.gd" id="2_6y2yj"]
-[ext_resource type="Texture2D" uid="uid://db8svw1plhdy" path="res://Assets/Buttons/help_icon.png" id="2_aax2d"]
-[ext_resource type="Script" path="res://Scenes/helpControl.gd" id="4_1ek38"]
-[ext_resource type="Texture2D" uid="uid://c2417sq2b0pf4" path="res://Assets/player1_box.png" id="5_0ph5j"]
-[ext_resource type="Texture2D" uid="uid://cgkfnwsqljpym" path="res://Assets/player2_box.png" id="6_lgo1j"]
-[ext_resource type="Texture2D" uid="uid://f25w74gykiob" path="res://Assets/player3_box.png" id="7_40b7q"]
-[ext_resource type="Texture2D" uid="uid://cb6rc5ifqxhxu" path="res://Assets/player4_box.png" id="8_lgbmi"]
+[ext_resource type="Texture2D" uid="uid://bv6l2ju1lb6gm" path="res://Assets/MainBox.png" id="6_26var"]
+[ext_resource type="Texture2D" uid="uid://bbti1js6m8f80" path="res://Assets/innerBox.png" id="7_p022d"]
+[ext_resource type="Texture2D" uid="uid://cg3gikopgo0j" path="res://Assets/OuterNumberBox.png" id="8_c1hrr"]
+[ext_resource type="Texture2D" uid="uid://ce6btf6b1gvuh" path="res://Assets/Component 1.png" id="9_kpf4f"]
 [ext_resource type="Texture2D" uid="uid://jg1bosmwjyq8" path="res://Assets/main_box.png" id="9_tkwg6"]
 [ext_resource type="Script" path="res://Scenes/label.gd" id="9_y78ns"]
 [ext_resource type="Texture2D" uid="uid://muodcselksnm" path="res://Assets/Buttons/Button Danger.png" id="10_p2bya"]
-[ext_resource type="Texture2D" uid="uid://4haquyl0i4ch" path="res://Assets/Numbers/9_button.png" id="11_ui1ka"]
-[ext_resource type="Texture2D" uid="uid://b7w6pyg1fqnib" path="res://Assets/Numbers/8_button.png" id="12_2nf7k"]
-[ext_resource type="Texture2D" uid="uid://50fbfw0hc44t" path="res://Assets/Numbers/7_button.png" id="13_2rseb"]
-[ext_resource type="Texture2D" uid="uid://dmh0fg1cbqlqy" path="res://Assets/Numbers/6_button.png" id="14_o6kfw"]
-[ext_resource type="Texture2D" uid="uid://cpomj5w7wn2pd" path="res://Assets/Numbers/5_button.png" id="15_qnms8"]
-[ext_resource type="Texture2D" uid="uid://e1dm1nf8kvuk" path="res://Assets/Numbers/4_button.png" id="16_tl717"]
-[ext_resource type="Texture2D" uid="uid://dqojx2gdoras2" path="res://Assets/Numbers/3_button.png" id="17_xvasw"]
-[ext_resource type="Texture2D" uid="uid://yigki7ewvv0q" path="res://Assets/Numbers/2_button.png" id="18_dkqns"]
-[ext_resource type="Texture2D" uid="uid://0505v0mde10t" path="res://Assets/Numbers/1_button.png" id="19_e0hs5"]
-[ext_resource type="Texture2D" uid="uid://cau4w0busr3or" path="res://Assets/Numbers/0_button.png" id="20_bucrp"]
+[ext_resource type="Texture2D" uid="uid://brpiun0uv30b0" path="res://Assets/Component 2.png" id="10_yqmaa"]
+[ext_resource type="Texture2D" uid="uid://baenlhm7xfusf" path="res://Assets/Help circle.png" id="11_rq85j"]
+[ext_resource type="Script" path="res://Scenes/control_help.gd" id="12_1sjo5"]
 
 [node name="FirstWorld" type="Node2D"]
 
-[node name="PinkBackground" type="Sprite2D" parent="."]
-position = Vector2(582.125, 328.438)
-scale = Vector2(1.85216, 1.73911)
-texture = ExtResource("1_js0sa")
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(577, 325)
+scale = Vector2(2.0855, 1.92297)
+texture = ExtResource("1_11h8f")
 
-[node name="SurrenderButton" type="TextureButton" parent="PinkBackground"]
+[node name="SurrenderButton" type="TextureButton" parent="Background"]
 anchors_preset = -1
 anchor_left = -0.0968161
 anchor_top = -0.066762
 anchor_right = -0.0968161
 anchor_bottom = -0.066762
-offset_left = 207.413
-offset_top = -178.697
-offset_right = 324.413
-offset_bottom = -128.697
+offset_left = 0.217846
+offset_top = 154.066
+offset_right = 117.218
+offset_bottom = 204.066
 script = ExtResource("2_6y2yj")
 metadata/_edit_use_anchors_ = true
 
-[node name="ButtonDanger" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(233.425, -165.674)
-scale = Vector2(0.541903, 0.591958)
+[node name="ButtonDanger" type="Sprite2D" parent="Background"]
+position = Vector2(-0.959045, 153.409)
+scale = Vector2(0.416122, 0.355074)
 texture = ExtResource("10_p2bya")
 
-[node name="Player1Box" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(-247.65, -58.0119)
-scale = Vector2(0.612008, 0.695047)
-texture = ExtResource("5_0ph5j")
-
-[node name="Player2Box" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(-248.868, 49.7983)
-scale = Vector2(0.61645, 0.655676)
-texture = ExtResource("6_lgo1j")
-
-[node name="Player3Box" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(214.274, -89.204)
-scale = Vector2(0.609954, 0.678596)
-texture = ExtResource("7_40b7q")
-
-[node name="Player4Box" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(216.625, 48.6144)
-scale = Vector2(0.663089, 0.718107)
-texture = ExtResource("8_lgbmi")
-
-[node name="MainBox" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(-19.5085, -6.51154)
+[node name="MainBox" type="Sprite2D" parent="Background"]
+position = Vector2(498.202, 16.1209)
 scale = Vector2(0.44294, 0.501595)
 texture = ExtResource("9_tkwg6")
 
-[node name="Label" type="RichTextLabel" parent="PinkBackground/MainBox"]
-offset_left = -265.483
-offset_top = -143.978
-offset_right = -132.483
-offset_bottom = -77.9784
+[node name="MainBox2" type="Sprite2D" parent="Background"]
+position = Vector2(-0.479498, -65.0037)
+texture = ExtResource("6_26var")
+
+[node name="InnerBox" type="Sprite2D" parent="Background"]
+position = Vector2(-106.929, -91.0052)
+texture = ExtResource("7_p022d")
+
+[node name="InnerBox" type="Sprite2D" parent="Background/InnerBox"]
+position = Vector2(211.46, 1.13249e-06)
+texture = ExtResource("7_p022d")
+
+[node name="Label" type="RichTextLabel" parent="Background/InnerBox"]
+offset_left = -27.0
+offset_top = -37.0
+offset_right = 16.0
+offset_bottom = -6.0
 scale = Vector2(1.5, 1.5)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 40
-text = " 1     2
+theme_override_font_sizes/normal_font_size = 10
+text = "1 2"
+autowrap_mode = 0
+script = ExtResource("9_y78ns")
+
+[node name="Label2" type="RichTextLabel" parent="Background/InnerBox"]
+offset_left = 179.813
+offset_top = -37.9622
+offset_right = 217.813
+offset_bottom = -8.96215
+scale = Vector2(1.5, 1.5)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 10
+text = " 1 2
 "
 autowrap_mode = 0
 script = ExtResource("9_y78ns")
 
-[node name="Label2" type="RichTextLabel" parent="PinkBackground/MainBox"]
-offset_left = 97.8737
-offset_top = -140.438
-offset_right = 230.874
-offset_bottom = -74.4379
-scale = Vector2(1.5, 1.5)
-theme_override_colors/default_color = Color(0, 0, 0, 1)
+[node name="OuterNumberBox" type="Sprite2D" parent="Background"]
+position = Vector2(-126.588, -66.5638)
+texture = ExtResource("8_c1hrr")
+
+[node name="OuterNumberBox" type="Sprite2D" parent="Background/OuterNumberBox"]
+position = Vector2(29.7291, 7.62939e-06)
+texture = ExtResource("8_c1hrr")
+
+[node name="OuterNumberBox2" type="Sprite2D" parent="Background/OuterNumberBox"]
+position = Vector2(216.735, 0)
+texture = ExtResource("8_c1hrr")
+
+[node name="OuterNumberBox" type="Sprite2D" parent="Background/OuterNumberBox/OuterNumberBox2"]
+position = Vector2(29.7291, 7.62939e-06)
+texture = ExtResource("8_c1hrr")
+
+[node name="Label" type="RichTextLabel" parent="."]
+offset_left = 179.0
+offset_top = 48.0
+offset_right = 312.0
+offset_bottom = 114.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 40
-text = " 1     2
+text = "Round:
 "
 autowrap_mode = 0
-script = ExtResource("9_y78ns")
 
-[node name="9Button" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(120.844, 77.5464)
-scale = Vector2(0.541903, 0.591958)
-texture = ExtResource("11_ui1ka")
+[node name="Label2" type="RichTextLabel" parent="."]
+offset_left = 622.0
+offset_top = 48.0
+offset_right = 755.0
+offset_bottom = 114.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = "Round:
+"
+autowrap_mode = 0
 
-[node name="8Button" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(91.0396, 76.9545)
-scale = Vector2(0.541903, 0.591958)
-texture = ExtResource("12_2nf7k")
+[node name="Component1" type="Sprite2D" parent="."]
+position = Vector2(574, 304)
+scale = Vector2(2, 2)
+texture = ExtResource("9_kpf4f")
 
-[node name="7Button" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(61.7769, 76.9545)
-scale = Vector2(0.541903, 0.591958)
-texture = ExtResource("13_2rseb")
+[node name="Component2" type="Sprite2D" parent="."]
+position = Vector2(578, 485)
+scale = Vector2(2.1, 2.1)
+texture = ExtResource("10_yqmaa")
 
-[node name="6Button" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(31.4304, 76.3625)
-scale = Vector2(0.541903, 0.591958)
-texture = ExtResource("14_o6kfw")
+[node name="HelpCircle" type="Sprite2D" parent="Component2"]
+position = Vector2(260.952, 65.2381)
+scale = Vector2(0.952381, 0.952381)
+texture = ExtResource("11_rq85j")
 
-[node name="5Button" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(1.62573, 76.9545)
-scale = Vector2(0.541903, 0.591958)
-texture = ExtResource("15_qnms8")
-
-[node name="4Button" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(-29.8046, 77.5464)
-scale = Vector2(0.541903, 0.591958)
-texture = ExtResource("16_tl717")
-
-[node name="3Button" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(-60.6931, 76.9545)
-scale = Vector2(0.541903, 0.591958)
-texture = ExtResource("17_xvasw")
-
-[node name="2Button" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(-91.0396, 76.9545)
-scale = Vector2(0.541903, 0.591958)
-texture = ExtResource("18_dkqns")
-
-[node name="1Button" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(-120.844, 76.9545)
-scale = Vector2(0.541903, 0.591958)
-texture = ExtResource("19_e0hs5")
-
-[node name="0Button" type="Sprite2D" parent="PinkBackground"]
-position = Vector2(-151.191, 76.9545)
-scale = Vector2(0.541903, 0.591958)
-texture = ExtResource("20_bucrp")
-
-[node name="Control" type="Control" parent="PinkBackground/0Button"]
+[node name="Control" type="Control" parent="Component2/HelpCircle"]
 layout_mode = 3
-anchors_preset = 0
-offset_left = 794.0
-offset_top = -397.0
-offset_right = 832.0
-offset_bottom = -356.0
-script = ExtResource("4_1ek38")
+anchor_left = -0.751
+anchor_top = -17.02
+anchor_right = -0.751
+anchor_bottom = -17.02
+offset_left = 5.016
+offset_top = 242.82
+offset_right = 45.016
+offset_bottom = 282.82
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_1sjo5")
 
-[node name="Button" type="Button" parent="PinkBackground/0Button/Control"]
-layout_mode = 0
-offset_left = -17.3409
-offset_top = -29.0059
-offset_right = 28.6591
-offset_bottom = 15.9941
-icon = ExtResource("2_aax2d")
-flat = true
+[node name="Button" type="Button" parent="Component2/HelpCircle/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -13.94
+anchor_top = -7.025
+anchor_right = -13.94
+anchor_bottom = -7.025
+offset_left = 549.6
+offset_top = 301.0
+offset_right = 575.6
+offset_bottom = 321.0
 
-[connection signal="pressed" from="PinkBackground/SurrenderButton" to="PinkBackground/SurrenderButton" method="_on_pressed"]
-[connection signal="pressed" from="PinkBackground/0Button/Control/Button" to="PinkBackground/0Button/Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Background/SurrenderButton" to="Background/SurrenderButton" method="_on_pressed"]
+[connection signal="pressed" from="Component2/HelpCircle/Control/Button" to="Component2/HelpCircle/Control" method="_on_button_pressed"]

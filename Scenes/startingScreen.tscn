@@ -1,7 +1,28 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbuu6lmqcawg4"]
+[gd_scene load_steps=7 format=3 uid="uid://bbuu6lmqcawg4"]
 
 [ext_resource type="Script" path="res://Scripts/playButton.gd" id="1_cnodk"]
 [ext_resource type="Script" path="res://Scripts/quitButton.gd" id="2_xq2nc"]
+
+[sub_resource type="GDScript" id="GDScript_lkvk5"]
+script/source = "extends Node2D  # Assuming your script is attached to Node2D
+
+# @onready var networking_manager = preload(\"res://Scripts/networking_manager.gd\").new()
+
+#func _ready():
+	# Correct path to the button based on your scene structure
+	#$Control/Panel/Button.pressed.connect(self._on_start_server_pressed)
+	#$Control/Panel/JoinClientButton.pressed.connect(self._on_join_client_pressed)  # Update this if JoinClientButton is similarly nested
+
+# When the \"Start Server\" button is pressed
+func _on_start_server_pressed():
+	print(\"Starting server...\")
+	# networking_manager.start_server()
+
+# When the \"Join as Client\" button is pressed
+func _on_join_client_pressed():
+	print(\"Joining as client...\")
+	# networking_manager.start_client(\"72.83.212.112\")
+"
 
 [sub_resource type="GDScript" id="GDScript_o0j71"]
 script/source = "extends Control
@@ -20,6 +41,7 @@ bg_color = Color(0.700035, 0.515335, 0.794112, 1)
 [sub_resource type="Theme" id="Theme_k1ffw"]
 
 [node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_lkvk5")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
