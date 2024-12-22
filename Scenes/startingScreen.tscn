@@ -1,62 +1,50 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbuu6lmqcawg4"]
+[gd_scene load_steps=5 format=3 uid="uid://bbuu6lmqcawg4"]
 
 [ext_resource type="Script" path="res://Scripts/playButton.gd" id="1_cnodk"]
 [ext_resource type="Script" path="res://Scripts/quitButton.gd" id="2_xq2nc"]
-
-[sub_resource type="GDScript" id="GDScript_lkvk5"]
-script/source = "extends Node2D  # Assuming your script is attached to Node2D
-
-# @onready var networking_manager = preload(\"res://Scripts/networking_manager.gd\").new()
-
-#func _ready():
-	# Correct path to the button based on your scene structure
-	#$Control/Panel/Button.pressed.connect(self._on_start_server_pressed)
-	#$Control/Panel/JoinClientButton.pressed.connect(self._on_join_client_pressed)  # Update this if JoinClientButton is similarly nested
-
-# When the \"Start Server\" button is pressed
-func _on_start_server_pressed():
-	print(\"Starting server...\")
-	# networking_manager.start_server()
-
-# When the \"Join as Client\" button is pressed
-func _on_join_client_pressed():
-	print(\"Joining as client...\")
-	# networking_manager.start_client(\"72.83.212.112\")
-"
-
-[sub_resource type="GDScript" id="GDScript_o0j71"]
-script/source = "extends Control
-
-
-func _on_pressedPlay() -> void:
-	get_tree().change_scene_to_file(\"res://ArcadeGames/Scenes/firstWorld.tscn\")
-
-func _on_pressedQuit() -> void:
-	get_tree().quit()
-"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0e0b"]
 bg_color = Color(0.700035, 0.515335, 0.794112, 1)
 
 [sub_resource type="Theme" id="Theme_k1ffw"]
 
-[node name="Node2D" type="Node2D"]
-script = SubResource("GDScript_lkvk5")
-
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = SubResource("GDScript_o0j71")
 
-[node name="Panel" type="Panel" parent="Control"]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 0
 offset_right = 1167.0
 offset_bottom = 647.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_b0e0b")
 
-[node name="Label" type="Label" parent="Control/Panel"]
+[node name="Host" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 276.0
+offset_right = 456.0
+offset_bottom = 315.0
+text = "Host"
+
+[node name="DelMe" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 404.0
+offset_right = 603.0
+offset_bottom = 438.0
+text = "Start Game"
+script = ExtResource("1_cnodk")
+
+[node name="Quit" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 759.0
+offset_top = 280.0
+offset_right = 853.0
+offset_bottom = 316.0
+text = "Quit"
+script = ExtResource("2_xq2nc")
+
+[node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
 offset_left = 497.0
 offset_top = 234.0
@@ -68,23 +56,22 @@ theme_override_colors/font_shadow_color = Color(0.744905, 0.287202, 0.670824, 1)
 theme_override_font_sizes/font_size = 25
 text = "Welcome Player"
 
-[node name="Button" type="Button" parent="Control/Panel"]
+[node name="Join" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 538.0
-offset_top = 275.0
-offset_right = 635.0
-offset_bottom = 309.0
-text = "Start Game"
-script = ExtResource("1_cnodk")
+offset_left = 485.0
+offset_top = 280.0
+offset_right = 585.0
+offset_bottom = 317.0
+text = "Join"
 
-[node name="Button2" type="Button" parent="Control/Panel"]
+[node name="Start Game" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 541.0
-offset_top = 318.0
-offset_right = 635.0
-offset_bottom = 354.0
-text = "Quit"
-script = ExtResource("2_xq2nc")
+offset_left = 613.0
+offset_top = 277.0
+offset_right = 735.0
+offset_bottom = 318.0
+text = "Start Game
+"
 
-[connection signal="pressed" from="Control/Panel/Button" to="Control/Panel/Button" method="_on_pressed"]
-[connection signal="pressed" from="Control/Panel/Button2" to="Control/Panel/Button2" method="_on_pressed"]
+[connection signal="pressed" from="Panel/DelMe" to="Panel/DelMe" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Quit" to="Panel/Quit" method="_on_pressed"]
