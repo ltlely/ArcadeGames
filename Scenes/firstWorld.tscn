@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bdlsfh84wbxcy"]
+[gd_scene load_steps=15 format=3 uid="uid://bdlsfh84wbxcy"]
 
 [ext_resource type="Texture2D" uid="uid://d2kn73avwm5gu" path="res://Assets/background.png" id="1_11h8f"]
+[ext_resource type="Script" path="res://Scenes/SceneManager.gd" id="1_yxomd"]
 [ext_resource type="Script" path="res://Scenes/texture_button_2.gd" id="2_6y2yj"]
 [ext_resource type="Texture2D" uid="uid://bv6l2ju1lb6gm" path="res://Assets/MainBox.png" id="6_26var"]
 [ext_resource type="Texture2D" uid="uid://bbti1js6m8f80" path="res://Assets/innerBox.png" id="7_p022d"]
@@ -15,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://oy28xjovxxew" path="res://Scenes/player.tscn" id="13_aq0me"]
 
 [node name="FirstWorld" type="Node2D"]
+script = ExtResource("1_yxomd")
+PlayerScene = ExtResource("13_aq0me")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(577, 325)
@@ -149,6 +152,7 @@ offset_bottom = 282.82
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("12_1sjo5")
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Component2/HelpCircle/Control"]
 layout_mode = 1
@@ -161,9 +165,21 @@ offset_left = 549.6
 offset_top = 301.0
 offset_right = 575.6
 offset_bottom = 321.0
+metadata/_edit_use_anchors_ = true
 
-[node name="Player" parent="." instance=ExtResource("13_aq0me")]
-position = Vector2(196, 472)
+[node name="SpawnLocations" type="Node2D" parent="."]
+position = Vector2(939, 442)
+
+[node name="0" type="Node2D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+position = Vector2(-702, -9)
+
+[node name="1" type="Node2D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+position = Vector2(-475, -10)
+
+[node name="2" type="Node2D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
+position = Vector2(-246, -3)
+
+[node name="3" type="Node2D" parent="SpawnLocations" groups=["PlayerSpawnPoint"]]
 
 [connection signal="pressed" from="Background/SurrenderButton" to="Background/SurrenderButton" method="_on_pressed"]
 [connection signal="pressed" from="Component2/HelpCircle/Control/Button" to="Component2/HelpCircle/Control" method="_on_button_pressed"]
