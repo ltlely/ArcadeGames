@@ -1,7 +1,7 @@
 extends Control
 
 # Properties to set display time and text
-var display_time: float = 1.0
+var display_time: float = 5.0
 var text_to_show: String = "Default Text"
 
 # Called to set the display time
