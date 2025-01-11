@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bdlsfh84wbxcy"]
+[gd_scene load_steps=14 format=3 uid="uid://bdlsfh84wbxcy"]
 
 [ext_resource type="Texture2D" uid="uid://d2kn73avwm5gu" path="res://Assets/background.png" id="1_11h8f"]
 [ext_resource type="Script" path="res://Scenes/SceneManager.gd" id="1_yxomd"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://cg3gikopgo0j" path="res://Assets/OuterNumberBox.png" id="8_c1hrr"]
 [ext_resource type="Texture2D" uid="uid://ce6btf6b1gvuh" path="res://Assets/Component 1.png" id="9_kpf4f"]
 [ext_resource type="Texture2D" uid="uid://jg1bosmwjyq8" path="res://Assets/main_box.png" id="9_tkwg6"]
-[ext_resource type="Script" path="res://Scenes/label.gd" id="9_y78ns"]
 [ext_resource type="Texture2D" uid="uid://muodcselksnm" path="res://Assets/Buttons/Button Danger.png" id="10_p2bya"]
 [ext_resource type="Texture2D" uid="uid://brpiun0uv30b0" path="res://Assets/Component 2.png" id="10_yqmaa"]
 [ext_resource type="Texture2D" uid="uid://baenlhm7xfusf" path="res://Assets/Help circle.png" id="11_rq85j"]
@@ -69,7 +68,6 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 10
 text = "1 2"
 autowrap_mode = 0
-script = ExtResource("9_y78ns")
 
 [node name="Label2" type="RichTextLabel" parent="Background/InnerBox"]
 offset_left = 179.813
@@ -82,7 +80,6 @@ theme_override_font_sizes/normal_font_size = 10
 text = " 1 2
 "
 autowrap_mode = 0
-script = ExtResource("9_y78ns")
 
 [node name="OuterNumberBox" type="Sprite2D" parent="Background"]
 position = Vector2(-126.588, -66.5638)
