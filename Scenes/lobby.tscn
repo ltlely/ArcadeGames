@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1eqgk6l12sty"]
+
+[ext_resource type="Texture2D" uid="uid://d2kn73avwm5gu" path="res://Assets/background.png" id="1_f6ndk"]
+[ext_resource type="Texture2D" uid="uid://cbtwa6abqcbm4" path="res://Assets/CircleIcon.png" id="2_47kcu"]
+[ext_resource type="Texture2D" uid="uid://bkhpwlt4ewd2b" path="res://Assets/Chevron down.png" id="3_dhnfq"]
+[ext_resource type="Script" path="res://Scenes/control.gd" id="4_egfn3"]
+
+[node name="Lobby" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(275, 169)
+texture = ExtResource("1_f6ndk")
+
+[node name="CircleIcon" type="Sprite2D" parent="."]
+position = Vector2(495, 42)
+texture = ExtResource("2_47kcu")
+
+[node name="ChevronDown" type="Sprite2D" parent="."]
+position = Vector2(534, 60)
+texture = ExtResource("3_dhnfq")
+
+[node name="Control" type="Control" parent="ChevronDown"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 42.0
+offset_bottom = 41.0
+script = ExtResource("4_egfn3")
+
+[node name="Button" type="Button" parent="ChevronDown/Control"]
+layout_mode = 1
+offset_left = -10.0
+offset_top = -6.0
+offset_right = 10.0
+offset_bottom = 7.0
+
+[connection signal="pressed" from="ChevronDown/Control/Button" to="ChevronDown/Control" method="_on_button_pressed"]

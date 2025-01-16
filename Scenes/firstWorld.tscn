@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://brpiun0uv30b0" path="res://Assets/Component 2.png" id="10_yqmaa"]
 [ext_resource type="Texture2D" uid="uid://baenlhm7xfusf" path="res://Assets/Help circle.png" id="11_rq85j"]
 [ext_resource type="Script" path="res://Scenes/control_help.gd" id="12_1sjo5"]
-[ext_resource type="PackedScene" uid="uid://oy28xjovxxew" path="res://Scenes/player.tscn" id="13_aq0me"]
+[ext_resource type="PackedScene" path="res://Scenes/player.tscn" id="13_aq0me"]
 
 [node name="FirstWorld" type="Node2D"]
 script = ExtResource("1_yxomd")

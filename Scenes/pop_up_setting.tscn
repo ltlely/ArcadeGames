@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3d4pml68eu4s"]
+
+[ext_resource type="Script" path="res://Scenes/pop_up_setting.gd" id="1_lgt1u"]
+[ext_resource type="Texture2D" uid="uid://d7equ42wwcmf" path="res://Assets/Settings.png" id="2_t4grr"]
+
+[node name="PopUpSetting" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lgt1u")
+
+[node name="Settings" type="Sprite2D" parent="."]
+position = Vector2(-50, 54)
+texture = ExtResource("2_t4grr")
